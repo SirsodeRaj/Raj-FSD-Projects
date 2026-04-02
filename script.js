@@ -22,6 +22,13 @@ const projects = [
     image: "./assets/bulb.png",
     live: "./projects/bulb-on-off-cat-eyes/index.html",
     code: "https://github.com/gauravthombre/Gaurav-Projects-Lab-FSD/tree/main/projects/bulb-on-off-cat-eyes"
+  },
+  {
+    name: "Wikipedia",
+    description: "It is wikipedia website showcasing destinations using static HTML CSS,JAVASCRIPT.",
+    image: "./assets/wikipedia.png",
+    live: "./projects/Wikipedia-js-website/index.html",
+    code: "https://github.com/gauravthombre/Gaurav-Projects-Lab-FSD/tree/main/projects/Wikipedia-js-website"
   }
 
 ];
