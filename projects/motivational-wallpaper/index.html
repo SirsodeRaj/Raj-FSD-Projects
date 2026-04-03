@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daily motivational wallpapers to inspire and uplift your spirit">
+    <title>Motivational Wallpaper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Full-screen background -->
+    <div class="wallpaper-bg" id="wallpaperBg"></div>
+    <div class="wallpaper-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">✨ Daily Inspiration</h1>
+            <div class="header-controls">
+                <button class="btn btn-icon" id="refreshBtn" aria-label="Get new wallpaper" title="New Wallpaper">
+                    🔄
+                </button>
+                <button class="btn btn-icon" id="favoriteHeaderBtn" aria-label="Save to favorites" title="Save to Favorites">
+                    🤍
+                </button>
+                <button class="btn btn-icon" id="downloadHeaderBtn" aria-label="Download wallpaper" title="Download">
+                    💾
+                </button>
+                <button class="btn btn-icon" id="favoritesBtn" aria-label="View favorites" title="View Favorites">
+                    ❤️
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Today's Wallpaper Display -->
+        <section class="today-wallpaper">
+            <div class="date-badge" id="dateBadge"></div>
+            <div class="quote-container">
+                <blockquote class="quote" id="quote"></blockquote>
+                <cite class="author" id="author"></cite>
+            </div>
+        </section>
+
+        <!-- Category Tabs -->
+        <section class="categories">
+            <button class="category-tab active" data-category="all">All</button>
+            <button class="category-tab" data-category="success">Success</button>
+            <button class="category-tab" data-category="life">Life</button>
+            <button class="category-tab" data-category="courage">Courage</button>
+            <button class="category-tab" data-category="wisdom">Wisdom</button>
+            <button class="category-tab" data-category="happiness">Happiness</button>
+        </section>
+
+        <!-- Wallpaper Gallery -->
+        <section class="gallery">
+            <h2 class="gallery-title">Browse Wallpapers</h2>
+            <div class="wallpaper-grid" id="wallpaperGrid">
+                <!-- Wallpapers will be dynamically inserted -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favoritesModal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="closeFavoritesModal" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title">❤️ Your Favorites</h2>
+            </div>
+            <div class="modal-body" id="favoritesList">
+                <!-- Favorite wallpapers will be inserted here -->
+            </div>
+            <div class="no-favorites" id="noFavorites" style="display: none;">
+                <p>No favorites yet. Click the heart icon to save wallpapers!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" style="display: none;">
+        <p class="toast-message" id="toastMessage"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Inspire your day, every day | Built with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and display popular memes from a static collection">
+    <title>Meme Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">😂 Meme Viewer</h1>
+            <div class="search-filter">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search memes..."
+                    aria-label="Search memes"
+                >
+                <select id="categoryFilter" class="category-filter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="classic">Classic</option>
+                    <option value="animals">Animals</option>
+                    <option value="programming">Programming</option>
+                    <option value="reactions">Reactions</option>
+                    <option value "motivational">Motivational</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats-bar">
+            <div class="stat">
+                <span class="stat-value" id="totalMemes">0</span>
+                <span class="stat-label">Total Memes</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="shownMemes">0</span>
+                <span class="stat-label">Showing</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="favorites">0</span>
+                <span class="stat-label">Favorites</span>
+            </div>
+        </section>
+
+        <section class="meme-gallery" id="memeGallery" aria-label="Meme gallery">
+            <!-- Memes will be dynamically inserted here -->
+        </section>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <p class="no-results-text">😕 No memes found</p>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button class="btn btn-secondary" id="prevBtn" disabled>← Previous</button>
+            <span class="page-info" id="pageInfo">Page 1 of 1</span>
+            <button class="btn btn-secondary" id="nextBtn">Next →</button>
+        </div>
+    </main>
+
+    <!-- Meme Modal -->
+    <div class="modal" id="memeModal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-category" id="modalCategory"></span>
+            </div>
+            <div class="modal-image-container">
+                <img class="modal-image" id="modalImage" src="" alt="">
+            </div>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="favoriteBtn">
+                    <span class="btn-icon">❤️</span>
+                    <span class="btn-text">Add to Favorites</span>
+                </button>
+                <button class="btn btn-secondary" id="copyLinkBtn">
+                    <span class="btn-icon">🔗</span>
+                    <span class="btn-text">Copy Link</span>
+                </button>
+                <button class="btn btn-secondary" id="downloadBtn">
+                    <span class="btn-icon">💾</span>
+                    <span class="btn-text">Download</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" style="display: none;">
+        <p class="toast-message" id="toastMessage"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with HTML, CSS & JavaScript | Memes are for educational purposes</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

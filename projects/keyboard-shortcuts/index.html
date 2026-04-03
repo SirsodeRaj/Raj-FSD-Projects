@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive keyboard shortcuts reference guide for Windows, Mac, and common applications">
+    <title>Keyboard Shortcut Cheatsheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">⌨️ Keyboard Shortcuts</h1>
+            <p class="subtitle">Your complete reference guide for productivity-boosting shortcuts</p>
+            
+            <div class="header-controls">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search shortcuts..."
+                        aria-label="Search keyboard shortcuts"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <div class="os-toggle">
+                    <button class="os-btn active" data-os="windows" aria-label="Windows shortcuts">
+                        🪟 Windows
+                    </button>
+                    <button class="os-btn" data-os="mac" aria-label="Mac shortcuts">
+                        🍎 Mac
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat">
+                <span class="stat-value" id="totalShortcuts">0</span>
+                <span class="stat-label">Total Shortcuts</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="categories">0</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="showing">0</span>
+                <span class="stat-label">Showing</span>
+            </div>
+            <button class="btn btn-primary" id="printBtn" title="Print cheatsheet">
+                🖨️ Print
+            </button>
+        </section>
+
+        <!-- Category Tabs -->
+        <section class="category-tabs" id="categoryTabs">
+            <!-- Categories will be dynamically inserted -->
+        </section>
+
+        <!-- Shortcuts Grid -->
+        <section class="shortcuts-grid" id="shortcutsGrid">
+            <!-- Shortcut cards will be dynamically inserted -->
+        </section>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <div class="no-results-icon">🔍</div>
+            <h3 class="no-results-title">No shortcuts found</h3>
+            <p class="no-results-text">Try a different search term or category</p>
+        </div>
+    </main>
+
+    <!-- Quick Reference Modal -->
+    <div class="modal" id="quickRefModal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal" aria-label="Close modal">&times;</button>
+            <h2 class="modal-title">⌨️ Quick Keyboard Reference</h2>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" style="display: none;">
+        <p class="toast-message" id="toastMessage"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built with HTML, CSS & JavaScript | Boost your productivity with keyboard shortcuts</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
