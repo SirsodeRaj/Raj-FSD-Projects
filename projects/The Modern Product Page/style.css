@@ -1,0 +1,8 @@
+/* Responsive Layout */
+.navbar { display: flex; justify-content: space-between; padding: 20px; }
+.hero { text-align: center; padding: 100px 20px; background: #f4f4f4; }
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; align-items: center; }
+}
