@@ -170,3 +170,74 @@ body {
   font-size: 14px;
   color: #6b7280;
 }
+
+
+/* ===== NEW MODERN DESIGN ===== */
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.projects-section h2 {
+  color: #ffffff;
+  font-size: 42px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
+
+.project-content p {
+  color: #d1d5db;
+}
+
+.btn.primary {
+  background: #8b5cf6;
+}
+
+.btn.primary:hover {
+  background: #7c3aed;
+}
+
+.btn.secondary {
+  border: 1px solid #8b5cf6;
+  color: #c4b5fd;
+}
+
+.btn.secondary:hover {
+  background: #8b5cf6;
+  color: white;
+}
+
+.stats-section {
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer {
+  background: #020617;
+  color: #94a3b8;
+}
+
+.footer h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .projects-section {
+    padding: 60px 20px;
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+}
